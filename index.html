@@ -8,8 +8,10 @@
     <a href="./reddit.html">Reddit</a>
   </body>
   <script>
-    fetch('https://api.hypixel.net/v2/skyblock/bazaar').then((data) => {
-      console.log(data.json())
-    })
+    setInterval(() => {
+      fetch('https://api.hypixel.net/v2/skyblock/bazaar').then((data) => {
+        console.log(data.json().value.products)
+      })
+    }, 30000)
   </script>
 </html>
